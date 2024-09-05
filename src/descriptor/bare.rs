@@ -267,7 +267,7 @@ impl<Pk: MiniscriptKey + ToPublicKey> Pkh<Pk> {
         let addr = elements::Address::p2pkh(
             &self.pk.to_public_key(),
             None,
-            &elements::AddressParams::ELEMENTS,
+            &elements::AddressParams::SEQUENTIA_REGTEST,
         );
         addr.script_pubkey()
     }

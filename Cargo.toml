@@ -20,7 +20,7 @@ base64 = ["bitcoin/base64", "elements/base64"]
 
 [dependencies]
 bitcoin = "0.31.0"
-elements = "0.24.0"
+elements = { version = "0.24.0", git = "https://github.com/SequentiaSEQ/rust-sequentia", rev = "c824a874aba0d1d298e2ce5da33a787893a320dc" }
 bitcoin-miniscript = { package = "miniscript", version = "11.0" }
 simplicity = { package = "simplicity-lang", version = "0.2.0", optional = true }
 

@@ -643,7 +643,7 @@ fn spk_to_components(s: &elements::Script) -> (i8, Vec<u8>) {
     } else {
         // indirect way to get payload.
         // The address parameters don't really matter here
-        let addr = Address::from_script(s, None, &AddressParams::ELEMENTS).unwrap();
+        let addr = Address::from_script(s, None, &AddressParams::SEQUENTIA_REGTEST).unwrap();
         if let Payload::WitnessProgram { version, program } = addr.payload {
             (version.to_u8() as i8, program)
         } else {

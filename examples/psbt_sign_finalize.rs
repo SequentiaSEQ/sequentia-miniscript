@@ -14,7 +14,7 @@ use miniscript::psbt::{PsbtExt, PsbtInputExt};
 use miniscript::{elementssig_to_rawsig, Descriptor};
 use {actual_base64 as base64, elements_miniscript as miniscript};
 
-const ELEMENTS_PARAMS: AddressParams = AddressParams::ELEMENTS;
+const ELEMENTS_PARAMS: AddressParams = AddressParams::SEQUENTIA_REGTEST;
 
 fn main() {
     let secp256k1 = secp256k1::Secp256k1::new();

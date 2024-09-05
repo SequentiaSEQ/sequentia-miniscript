@@ -33,7 +33,7 @@ use miniscript::{
 use rand::RngCore;
 use {actual_rand as rand, elements_miniscript as miniscript};
 
-pub static PARAMS: AddressParams = AddressParams::ELEMENTS;
+pub static PARAMS: AddressParams = AddressParams::SEQUENTIA_REGTEST;
 
 #[derive(Clone, Debug)]
 pub struct PubData {

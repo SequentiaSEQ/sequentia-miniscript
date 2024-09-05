@@ -47,7 +47,7 @@ fn p2wsh<C: Verification>(secp: &Secp256k1<C>) -> Address {
         .unwrap()
         .derived_descriptor(secp)
         .unwrap()
-        .address(&elements::AddressParams::ELEMENTS)
+        .address(&elements::AddressParams::SEQUENTIA_REGTEST)
         .unwrap();
     let expected = elements::Address::from_str(
         "ert1qpq2cfgz5lktxzr5zqv7nrzz46hsvq3492ump9pz8rzcl8wqtwqcs2yqnuv",
@@ -70,7 +70,7 @@ fn p2sh_p2wsh<C: Verification>(secp: &Secp256k1<C>) -> Address {
         .unwrap()
         .derived_descriptor(secp, 5)
         .unwrap()
-        .address(&elements::AddressParams::ELEMENTS)
+        .address(&elements::AddressParams::SEQUENTIA_REGTEST)
         .unwrap();
     let expected = elements::Address::from_str("XBkDY63XnRTz6BbwzJi3ifGhBwLTomEzkq").unwrap();
     assert_eq!(address, expected);

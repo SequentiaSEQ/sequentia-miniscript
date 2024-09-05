@@ -163,7 +163,7 @@ mod test {
         };
         let definite_desc = single_desc.at_derivation_index(0).unwrap();
         let secp = elements::secp256k1_zkp::Secp256k1::new();
-        let params = &elements::AddressParams::LIQUID;
+        let params = &elements::AddressParams::SEQUENTIA;
         definite_desc.address(&secp, params).unwrap().to_string()
     }
 

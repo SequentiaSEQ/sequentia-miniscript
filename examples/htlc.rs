@@ -68,7 +68,7 @@ fn main() {
     assert_eq!(
         format!(
             "{}",
-            htlc_descriptor.address(None, &elements::AddressParams::ELEMENTS)
+            htlc_descriptor.address(None, &elements::AddressParams::SEQUENTIA_REGTEST)
         ),
         "ert1qmpfcw7he9z5d9ftfe8qw699azmm2sr8fen903fs4plv007yx0t3qdt0h29"
     );

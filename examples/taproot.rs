@@ -117,7 +117,7 @@ fn main() {
 
     // Compute the bitcoin address and check if it matches
     let addr = real_desc
-        .address(&elements::AddressParams::ELEMENTS)
+        .address(&elements::AddressParams::SEQUENTIA_REGTEST)
         .unwrap();
     let expected_addr = elements::Address::from_str(
         "ert1pxx6wkfdnnx97akwws8l8xdmx5n03qftvx2t269k4sn9adm2emz0sdnytn4",

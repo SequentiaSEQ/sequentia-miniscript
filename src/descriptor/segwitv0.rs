@@ -424,7 +424,7 @@ impl<Pk: MiniscriptKey> Wpkh<Pk> {
 impl<Pk: MiniscriptKey + ToPublicKey> Wpkh<Pk> {
     /// Obtains the corresponding script pubkey for this descriptor.
     pub fn script_pubkey(&self) -> Script {
-        let addr = self.address(None, &elements::AddressParams::ELEMENTS);
+        let addr = self.address(None, &elements::AddressParams::SEQUENTIA_REGTEST);
         addr.script_pubkey()
     }
 
@@ -451,7 +451,7 @@ impl<Pk: MiniscriptKey + ToPublicKey> Wpkh<Pk> {
         let addr = elements::Address::p2pkh(
             &self.pk.to_public_key(),
             None,
-            &elements::AddressParams::ELEMENTS,
+            &elements::AddressParams::SEQUENTIA_REGTEST,
         );
         // Need this expect in future
         // .expect("wpkh descriptors have compressed keys");

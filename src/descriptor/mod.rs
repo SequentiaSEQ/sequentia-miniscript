@@ -1388,7 +1388,7 @@ mod tests {
             )
         );
         assert_eq!(
-            bare.address(&elements::AddressParams::ELEMENTS)
+            bare.address(&elements::AddressParams::SEQUENTIA_REGTEST)
                 .unwrap_err()
                 .to_string(),
             "Bare descriptors don't have address"
@@ -1424,7 +1424,7 @@ mod tests {
                 .into_script()
         );
         assert_eq!(
-            pkh.address(&elements::AddressParams::ELEMENTS,)
+            pkh.address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "2dmYXpSu8YP6aLcJYhHfB1C19mdzSx2GPB9"
@@ -1447,7 +1447,7 @@ mod tests {
                 .into_script()
         );
         assert_eq!(
-            wpkh.address(&elements::AddressParams::ELEMENTS,)
+            wpkh.address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "ert1qsn57m9drscflq5nl76z6ny52hck5w4x57m69k3"
@@ -1472,7 +1472,7 @@ mod tests {
         );
         assert_eq!(
             shwpkh
-                .address(&elements::AddressParams::ELEMENTS,)
+                .address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "XZPaAbg6M83Fq5NqvbEGZ5kwy9RKSTke2s"
@@ -1496,7 +1496,7 @@ mod tests {
                 .into_script()
         );
         assert_eq!(
-            sh.address(&elements::AddressParams::ELEMENTS,)
+            sh.address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "XSspZXDJu2XVh8AKC7qF3L7x79Qy67JhQb"
@@ -1524,7 +1524,7 @@ mod tests {
                 .into_script()
         );
         assert_eq!(
-            wsh.address(&elements::AddressParams::ELEMENTS,)
+            wsh.address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "ert1qlymeahyfsv2jm3upw3urqp6m65ufde9seedl7umh0lth6yjt5zzsan9u2t"
@@ -1549,7 +1549,7 @@ mod tests {
         );
         assert_eq!(
             shwsh
-                .address(&elements::AddressParams::ELEMENTS,)
+                .address(&elements::AddressParams::SEQUENTIA_REGTEST,)
                 .unwrap()
                 .to_string(),
             "XJGggUb965TvGF2VCxp9EQGmZTxMeDjwQQ"
@@ -2004,14 +2004,14 @@ mod tests {
                 .unwrap()
                 .derived_descriptor(&secp_ctx)
                 .unwrap()
-                .address(&elements::AddressParams::ELEMENTS)
+                .address(&elements::AddressParams::SEQUENTIA_REGTEST)
                 .unwrap();
             let addr_two = desc_two
                 .at_derivation_index(index)
                 .unwrap()
                 .derived_descriptor(&secp_ctx)
                 .unwrap()
-                .address(&elements::AddressParams::ELEMENTS)
+                .address(&elements::AddressParams::SEQUENTIA_REGTEST)
                 .unwrap();
             let addr_expected = elements::Address::from_str(raw_addr_expected).unwrap();
             assert_eq!(addr_one, addr_expected);

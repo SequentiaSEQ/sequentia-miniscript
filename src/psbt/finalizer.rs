@@ -231,7 +231,7 @@ pub(super) fn get_descriptor(
                         let addr = elements::Address::p2wpkh(
                             &pk,
                             None,
-                            &elements::AddressParams::ELEMENTS,
+                            &elements::AddressParams::SEQUENTIA_REGTEST,
                         );
                         *redeem_script == addr.script_pubkey()
                     });

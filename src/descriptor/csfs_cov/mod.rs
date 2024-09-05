@@ -368,7 +368,7 @@ mod tests {
 
         assert_eq!(desc.desc_type(), DescriptorType::Cov);
         assert_eq!(
-            desc.address(&elements::AddressParams::ELEMENTS)
+            desc.address(&elements::AddressParams::SEQUENTIA_REGTEST)
                 .unwrap()
                 .to_string(),
             "ert1qamjdykcfzkcsvc9z32a6qcz3mwr85a3k7z7qf2uaufem2q3lsjxqj4y4fy"
@@ -382,7 +382,7 @@ mod tests {
 
         assert_eq!(desc.desc_type(), DescriptorType::Cov);
         assert_eq!(
-            desc.address(&elements::AddressParams::ELEMENTS)
+            desc.address(&elements::AddressParams::SEQUENTIA_REGTEST)
                 .unwrap()
                 .to_string(),
             "ert1qamjdykcfzkcsvc9z32a6qcz3mwr85a3k7z7qf2uaufem2q3lsjxqj4y4fy"

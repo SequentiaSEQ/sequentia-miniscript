@@ -65,7 +65,7 @@
 //!
 //!     // Derive the P2SH address.
 //!     assert_eq!(
-//!         desc.address(&elements::AddressParams::ELEMENTS).unwrap().to_string(),
+//!         desc.address(&elements::AddressParams::SEQUENTIA_REGTEST).unwrap().to_string(),
 //!         "XMyBX13qCo5Lp65mymgYVdmsYR5bcznWUa"
 //!     );
 //!
