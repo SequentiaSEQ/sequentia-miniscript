@@ -492,6 +492,7 @@ mod tests {
                 asset_entropy: [0; 32],
                 amount: confidential::Value::Null,
                 inflation_keys: confidential::Value::Null,
+                asset_denomination: 8,
             },
             script_sig: Script::new(),
             witness: TxInWitness::default(),
