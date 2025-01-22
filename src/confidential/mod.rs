@@ -283,13 +283,13 @@ mod tests {
             assert_eq!(desc, Descriptor::from_str(&desc.to_string()).unwrap());
             assert_eq!(
                 self.conf_addr,
-                desc.address(secp, &elements::AddressParams::LIQUID)
+                desc.address(secp, &elements::AddressParams::SEQUENTIA)
                     .unwrap()
                     .to_string(),
             );
             assert_eq!(
                 self.unconf_addr,
-                desc.unconfidential_address(&elements::AddressParams::LIQUID)
+                desc.unconfidential_address(&elements::AddressParams::SEQUENTIA)
                     .unwrap()
                     .to_string(),
             );
@@ -531,8 +531,8 @@ mod tests {
         ] {
             let desc = Descriptor::<DefiniteDescriptorKey>::from_str(&desc_str).unwrap();
             assert_eq!(desc.to_string(), desc_str);
-            assert_eq!(addr_conf, &desc.address(&secp, &elements::AddressParams::LIQUID).unwrap().to_string());
-            assert_eq!(addr_unconf, &desc.unconfidential_address(&elements::AddressParams::LIQUID).unwrap().to_string());
+            assert_eq!(addr_conf, &desc.address(&secp, &elements::AddressParams::SEQUENTIA).unwrap().to_string());
+            assert_eq!(addr_unconf, &desc.unconfidential_address(&elements::AddressParams::SEQUENTIA).unwrap().to_string());
         }
     }
 
@@ -552,7 +552,7 @@ mod tests {
     #[test]
     fn descriptor_wildcard() {
         let secp = secp256k1_zkp::Secp256k1::new();
-        let params = &elements::AddressParams::LIQUID;
+        let params = &elements::AddressParams::SEQUENTIA;
 
         let xprv = "xprv9s21ZrQH143K28NgQ7bHCF61hy9VzwquBZvpzTwXLsbmQLRJ6iV9k2hUBRt5qzmBaSpeMj5LdcsHaXJvM7iFEivPryRcL8irN7Na9p65UUb";
         let xpub = "xpub661MyMwAqRbcEcT9W98HZP2kFzyzQQZkYnrRnrM8uD8kH8kSeFoQHq1x2iihLgC6PXGy5LrjCL66uSNhJ8pwjfx2rMUTLWuRMns2EG9xnjs";
